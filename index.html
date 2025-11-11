@@ -1,0 +1,59 @@
+<!doctype html>
+git checkout feature/name
+git switch -c feature/name
+git merge feature/name</code></pre>
+<button class="btn-copy">Скопировать</button>
+</section>
+
+
+<section class="card">
+    <h2>3. Отправка в удалённый репозиторий</h2>
+    <pre><code class="code" data-lang="bash">git remote add origin &lt;url&gt;
+git push -u origin main
+git push origin feature/name</code></pre>
+    <button class="btn-copy">Скопировать</button>
+</section>
+
+
+<section class="card">
+    <h2>4. Полезные приёмы</h2>
+    <ul>
+        <li><strong>Посмотреть историю:</strong> <code>git log --oneline --graph --all</code></li>
+        <li><strong>Откат изменений в рабочем каталоге:</strong> <code>git checkout -- &lt;file&gt;</code></li>
+        <li><strong>Откат коммита (создать новый коммит):</strong> <code>git revert &lt;hash&gt;</code></li>
+        <li><strong>Отмена локального коммита (без сохранения):</strong> <code>git reset --hard &lt;hash&gt;</code></li>
+    </ul>
+</section>
+
+
+<section class="card">
+    <h2>5. Алгоритм создания Pull Request</h2>
+    <ol>
+        <li>Создать ветку от master/main: <code>git checkout -b feature/имя</code></li>
+        <li>Сделать коммиты: <code>git add</code> + <code>git commit</code></li>
+        <li>Запушить ветку: <code>git push origin feature/имя</code></li>
+        <li>Открыть Pull Request на GitHub и выбрать шаблон PR</li>
+        <li>Исправить комментарии ревью и смержить в main</li>
+    </ol>
+</section>
+
+
+<section class="card small">
+    <h3>Настройки пользователя</h3>
+    <p>Установите имя и почту один раз:</p>
+    <pre><code class="code" data-lang="bash">git config --global user.name "Ваше имя"
+git config --global user.email "email@example.com"</code></pre>
+    <button class="btn-copy">Скопировать</button>
+</section>
+
+
+<footer class="footer">
+    <p>Автор: памятка автоматически сгенерирована · небольшая интерактивность: копирование в буфер</p>
+    <p>Источник информации: официальная документация Git — https://git-scm.com</p>
+</footer>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
