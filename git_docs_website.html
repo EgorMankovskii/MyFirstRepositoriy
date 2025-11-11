@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Docs — Путеводитель по Git</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      background: #f8f9fb;
+    }
+    header {
+      background: #24292e;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    header h1 { margin: 0; font-size: 1.4rem; }
+    main {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      min-height: calc(100vh - 70px);
+    }
+    nav {
+      background: #fff;
+      border-right: 1px solid #e5e7eb;
+      padding: 1rem;
+      position: sticky;
+      top: 70px;
+      height: calc(100vh - 70px);
+      overflow-y: auto;
+    }
+    nav a {
+      display: block;
+      padding: 0.5rem 0.75rem;
+      color: #333;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    nav a:hover { background: #f0f0f0; }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 { border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; margin-top: 2rem; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Fira Code', monospace;
+    }
+    code { color: #93c47d; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    @media (max-width: 768px) {
+      main { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Git Docs</h1>
+  </header>
+
+  <main>
+    <nav>
+      <a href="#intro">Введение</a>
+      <a href="#install">Установка Git</a>
+      <a href="#config">Настройка Git</a>
+      <a href="#workflow">Основной рабочий процесс</a>
+      <a href="#branching">Ветки и слияния</a>
+      <a href="#remote">Работа с удалёнными репозиториями</a>
+      <a href="#tips">Полезные команды</a>
+    </nav>
+
+    <section>
+      <h2 id="intro">Введение в Git</h2>
+      <p><strong>Git</strong> — это система контроля версий, позволяющая отслеживать изменения в коде и работать над проектами в команде. Она была создана Линусом Торвальдсом для управления разработкой ядра Linux.</p>
+
+      <h2 id="install">Установка Git</h2>
+      <pre><code># macOS
+brew install git
+
+# Ubuntu / Debian
+sudo apt install git
+
+# Windows
+Скачать установщик с https://git-scm.com</code></pre>
+
+      <h2 id="config">Настройка Git</h2>
+      <pre><code>git config --global user.name "Ваше Имя"
+git config --global user.email "email@example.com"
+
+# Проверка настроек
+git config --list</code></pre>
+
+      <h2 id="workflow">Основной рабочий процесс</h2>
+      <ol>
+        <li>Создать репозиторий: <code>git init</code></li>
+        <li>Добавить файлы: <code>git add .</code></li>
+        <li>Сделать коммит: <code>git commit -m "Первый коммит"</code></li>
+        <li>Посмотреть историю: <code>git log</code></li>
+      </ol>
+
+      <h2 id="branching">Ветки и слияния</h2>
+      <pre><code># Создать новую ветку
+git branch feature
+
+# Переключиться на неё
+git checkout feature
+
+# Объединить ветку с основной
+git merge feature</code></pre>
+
+      <h2 id="remote">Работа с удалёнными репозиториями</h2>
+      <pre><code># Добавить удалённый репозиторий
+git remote add origin https://github.com/user/repo.git
+
+# Отправить изменения
+git push -u origin main
+
+# Получить изменения
+git pull origin main</code></pre>
+
+      <h2 id="tips">Полезные команды</h2>
+      <pre><code># Отмена последнего коммита, сохранив изменения
+git reset --soft HEAD~1
+
+# Просмотр различий
+git diff
+
+# Удаление ветки
+git branch -d feature</code></pre>
+
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Git Docs — Сделано с ❤️ для разработчиков.
+  </footer>
+</body>
+</html>
